@@ -20,3 +20,19 @@ function Trabalhador(nome, cargo, salario) {
 const trabalhador1 = new Trabalhador("Andre", "eng software", 8000);
 trabalhador1.dizOi();
 trabalhador1.dizCargo();
+
+
+function Diretor(nome, cargo, salario) {
+    this.cargo = cargo;
+    this.salario = salario;
+
+    this.dizCargo = function() {
+        console.log(this.cargo);
+    }
+
+    Pessoa.call(this, nome);
+}
+
+const diretor1 = new Trabalhador("Roberto", "chefe de TI", 8000);
+diretor1.dizOi();
+diretor1.dizCargo();
